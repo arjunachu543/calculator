@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        button {
+            height: 65px;
+            width: 75px;
+            border-radius: 23px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        @media (max-width: 576px) {
+            button {
+                /* width: 40px; */
+                /* height: 40px; */
+                font-size: small;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container mt-3" style="width:max-content">
+        <div class="bg-dark container" style="border-radius: 10px">
+            <div>
+                <input id="result" type="text" class="bg-white w-100 mt-3" style="height: 80px; border-radius: 10px;">
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <button onclick="allClear()" style="color: rgb(52, 178, 178); font-size: x-large; font-weight: bolder;">AC</button>
+                <button onclick="backSpace()"><i class="fa-solid fa-backspace fa-2xl"></i></button>
+                <button onclick=""><i class="fa-solid fa-percent fa-2xl"></i></button>
+                <button onclick="displayData('/')" style="background-color: rgb(75, 225, 225);"><i class="fa-solid fa-divide fa-2xl"></i></button>
+            </div>
+            <div style="display: flex;justify-content: space-between;" class="mt-2">
+                <button onclick="displayData(7)"><i class="fa-solid fa-7 fa-2xl"></i></button>
+                <button onclick="displayData(8)"><i class="fa-solid fa-8 fa-2xl"></i></button>
+                <button onclick="displayData(9)"><i class="fa-solid fa-9 fa-2xl"></i></button>
+                <button onclick="displayData('+')" style="background-color: rgb(75, 225, 225);;"><i class="fa-solid fa-plus fa-2xl"></i></button>
+            </div>
+            <div style="display: flex;justify-content: space-between;" class="mt-2">
+                <button onclick="displayData(4)"><i class="fa-solid fa-4 fa-2xl"></i></button>
+                <button onclick="displayData(5)"><i class="fa-solid fa-5 fa-2xl"></i></button>
+                <button onclick="displayData(6)"><i class="fa-solid fa-6 fa-2xl"></i></button>
+                <button onclick="displayData('-')" style="background-color:rgb(75, 225, 225);"><i class="fa-solid fa-minus fa-2xl"></i></button>
+            </div>
+            <div style="display: flex;justify-content: space-between;" class="mt-2">
+                <button onclick="displayData(1)"><i class="fa-solid fa-1 fa-2xl"></i></button>
+                <button onclick="displayData(2)"><i class="fa-solid fa-2 fa-2xl"></i></button>
+                <button onclick="displayData(3)"><i class="fa-solid fa-3 fa-2xl"></i></button>
+                <button onclick="out()" style="background-color:rgb(75, 225, 225);"><i class="fa-solid fa-equals fa-2xl"></i></button>
+            </div>
+            <div style="display: flex;justify-content: space-between;" class="mt-2">
+                <button onclick="displayData(0)" style="width: 150px;"><i class="fa-solid fa-0 fa-2xl"></i></button>
+                <button onclick="displayData('.')"><i class="fa-solid fa-circle"></i></button>
+                <button onclick="displayData('x')" style="background-color:rgb(75, 225, 225);"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./calc.js"></script>
+
+</html>
